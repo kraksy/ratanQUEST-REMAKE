@@ -18,6 +18,12 @@ def init_screen(width: int, height: int) -> py.SurFace:
 def load_image(filename: str) -> py.Surface:
     return py.image.load(str(RESOURCES_DIR / filename))
 
-class game:
-    #please god help me
+class character:
+    #i need some help, but im alone\
 
+    print()
+
+class game:
+
+    #please god help me
+    print()
