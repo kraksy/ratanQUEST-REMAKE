@@ -1,34 +1,23 @@
 from pytmx.util_pygame import load_pygame
 import pygame as py
+from pathlib import Path
 import pyscroll
 
-FrameHeight = 800
-FrameWidth = 800
+# some variables for something
 
-py.display.set_caption("ratan quest")
-screen = py.display.set_mode((FrameWidth, FrameHeight))
+CURRENT_DIR = Path(__file__).parent
+RESOURCES_DIR = CURRENT_DIR / "data"
+HERO_MOVE_SPEED = 200
 
+def init_screen(width: int, height: int) -> py.SurFace:
+    screen = py.display.set_mode((width, height), py.RESIZABLE)
+    return screen
 
-class Sprite(pygame.sprite.Sprite):
+# this shit said that it will be easy to load image
 
-    def __init__(self, surface):
-        self.image = surface
-        self.rect = surface.get_rect()
+def load_image(filename: str) -> py.Surface:
+    return py.image.load(str(RESOURCES_DIR / filename))
 
+class game:
+    #please god help me
 
-tmx_data = load_pygame("desert.tmx")
-
-map_layer = pyscroll.BufferedRenderer(
-    map_data=pyscroll.TiledMapData(tmx_data),
-    screen_size=(400,400),
-)
-
-group = pyscroll.PyscrollGroup(map_layer=map_layer)
-
-surface = pygame.image.load("my_surface.png").convert_alpha()
-sprite = Sprite(surface)
-group.add(sprite)
-
-group.center(sprite.rect.center)
-
-group.draw(screen)
