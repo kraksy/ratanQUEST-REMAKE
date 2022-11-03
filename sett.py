@@ -1,7 +1,14 @@
 WIDTH = int(1024)
 HEIGHT = int(768)
-TILESIZE = int(64)
+
+TILE_SIZE = 32
 
 LIGHTGREY = (100, 100, 100)
 
 running = True
+
+YELLOW  = (255, 255, 0)
+RED     = (255, 0, 0)
+BLUE    = (0 , 0, 255)
+GREEN   = (0, 255, 0)
+BROWN   = (160, 82, 45)

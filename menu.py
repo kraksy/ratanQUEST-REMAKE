@@ -6,9 +6,14 @@ running = True
 while running:
     py.init()
 
-    for event in py.event.get():
-        if event.type == py.QUIT:
-            running = False
+
+    def event():
+        for event in py.event.get():
+            if event.type == py.QUIT:
+                py.quit()
+            if event.type == py.KEYDOWN:
+                if event.key == py.K_ESCAPE:
+                    py.quit()
 
     FrameHeight = 800
     FrameWidth = 800
@@ -57,11 +62,7 @@ while running:
         #speeeeeed
         scroll -= 2
   
-        if abs(scroll) > bg.get_width():
-            scroll = 0
-        for event in py.event.get():
-            if event.type == py.QUIT:
-                quit()
+
         py.display.update()
 
 py.quit()
