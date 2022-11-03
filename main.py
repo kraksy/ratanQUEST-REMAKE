@@ -1,10 +1,10 @@
 import pygame as py
-from sett import *
 from map import *
+from sett import *
 import random
 
 class gaem:
-
+    py.display.set_caption('ratan quest') 
     screen = py.display.set_mode((WIDTH, HEIGHT))
 
 
@@ -14,14 +14,9 @@ class gaem:
         
 
     textures = {
-    0x0 : create_texture(GREEN),
-    0x1 : create_texture(BROWN)
+    0 : create_texture(GREEN),
+    1 : create_texture(BROWN)
     }
-
-
-    def draw_map(screen, map_data):
-        MAP_HEIGHT = len(map_data) 
-        MAP_WIDTH = len(map_data[0])
 
     def event():
         for event in py.event.get():
@@ -33,6 +28,8 @@ class gaem:
 
     while running:
         event()
-        draw_map()
+
+        if tile 
+
 
     py.display.update()
