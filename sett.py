@@ -1,0 +1,5 @@
+WIDTH = int(1024)
+HEIGHT = int(768)
+TILESIZE = int(64)
+
+LIGHTGREY = (100, 100, 100)

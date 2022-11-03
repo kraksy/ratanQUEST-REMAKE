@@ -1,29 +1,28 @@
-from pytmx.util_pygame import load_pygame
 import pygame as py
-from pathlib import Path
-import pyscroll
+import sys as sus
+from sett import *
 
-# some variables for something
 
-CURRENT_DIR = Path(__file__).parent
-RESOURCES_DIR = CURRENT_DIR / "data"
-HERO_MOVE_SPEED = 200
+class gaem:
 
-def init_screen(width: int, height: int) -> py.SurFace:
-    screen = py.display.set_mode((width, height), py.RESIZABLE)
-    return screen
+    screen = py.display.set_mode(WIDTH, HEIGHT)
 
-# this shit said that it will be easy to load image
+    def draw_grid():
+        for x in range(0, WIDTH, TILESIZE):
+            pg.draw.line(self.screen, LIGHTGREY, (x, 0), (x, HEIGHT))
+        for y in range(0, HEIGHT, TILESIZE):
+            pg.draw.line(self.screen, LIGHTGREY, (0, y), (WIDTH, y))
 
-def load_image(filename: str) -> py.Surface:
-    return py.image.load(str(RESOURCES_DIR / filename))
+    def event():
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                self.quit()
+            if event.type == pg.KEYDOWN:
+                if event.key == pg.K_ESCAPE:
+                    self.quit()
 
-class character:
-    #i need some help, but im alone\
+    py.display.update()
 
-    print()
-
-class game:
-
-    #please god help me
-    print()
+    def quit():
+        py.quit()
+        sus.exit()
