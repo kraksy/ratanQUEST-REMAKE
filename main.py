@@ -5,24 +5,23 @@ from sett import *
 
 class gaem:
 
-    screen = py.display.set_mode(WIDTH, HEIGHT)
+    screen = py.display.set_mode((WIDTH, HEIGHT))
 
     def draw_grid():
         for x in range(0, WIDTH, TILESIZE):
-            pg.draw.line(self.screen, LIGHTGREY, (x, 0), (x, HEIGHT))
+            py.draw.line(self.screen, LIGHTGREY, (x, 0), (x, HEIGHT))
         for y in range(0, HEIGHT, TILESIZE):
-            pg.draw.line(self.screen, LIGHTGREY, (0, y), (WIDTH, y))
+            py.draw.line(self.screen, LIGHTGREY, (0, y), (WIDTH, y))
 
     def event():
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
+        for event in py.event.get():
+            if event.type == py.QUIT:
                 self.quit()
-            if event.type == pg.KEYDOWN:
-                if event.key == pg.K_ESCAPE:
+            if event.type == py.KEYDOWN:
+                if event.key == py.K_ESCAPE:
                     self.quit()
 
-    py.display.update()
+    while running:
+        event()
 
-    def quit():
-        py.quit()
-        sus.exit()
+    py.display.update()
