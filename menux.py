@@ -1,7 +1,6 @@
 import pygame as py 
 import math as ma
-import module as mod
-from sett import loading
+from sett import *
 
 class menu: 
 
