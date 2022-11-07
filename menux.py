@@ -1,23 +1,12 @@
 import pygame as py 
 import math as ma
-from sett import * 
+import module as mod
+from sett import loading
 
 class menu: 
 
     py.display.set_caption('ratan quest')
     screen = py.display.set_mode((WIDTH, HEIGHT))
-
-    def load():
-
-        bg = py.image.load("back.jpg").convert()
-        pg = py.image.load("title.png").convert_alpha()
-        po = py.image.load("op.png").convert_alpha()
-
-        rect = pg.get_rect()
-        rect.center = (400,300)
-
-        rect2 = po.get_rect()
-        rect2.center = (0,300)
 
     def event():
 
@@ -28,7 +17,7 @@ class menu:
                 if event.key == py.K_ESCAPE:
                     py.quit()
 
-    def loop():
+    def loop(bg , pg , po):
         while running:
             clock.tick(60)
 
@@ -47,9 +36,12 @@ class menu:
             screen.blit(po, (rect2.center))
             screen.blit(pg, (rect.center))
 
-        
+    def switch():
+        print()
+
     while running:
         load()
         event()
         logo()
         loop()
+

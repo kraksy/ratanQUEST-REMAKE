@@ -1,18 +1,41 @@
-WIDTH = int(1024)
-HEIGHT = int(768)
+import pygame as py
+import math
 
-TILE_SIZE = 32
+class loading:
 
-LIGHTGREY = (100, 100, 100)
+    try :
 
-running = True
+        WIDTH = int(1024)
+        HEIGHT = int(768)
 
-clock = py.time.Clock()
+        FrameHeight = 800
+        FrameWidth = 800
 
-tiles = math.ceil(FrameWidth /bg.get_width()) + 1
+        def load():
 
-YELLOW  = (255, 255, 0)
-RED     = (255, 0, 0)
-BLUE    = (0 , 0, 255)
-GREEN   = (0, 255, 0)
-BROWN   = (160, 82, 45)
+            bg = py.image.load("back.jpg").convert()
+            pg = py.image.load("title.png").convert_alpha()
+            po = py.image.load("op.png").convert_alpha()
+
+            rect = pg.get_rect()
+            rect.center = (400,300)
+
+            rect2 = po.get_rect()
+            rect2.center = (0,300)
+
+        TILE_SIZE = 32
+
+        LIGHTGREY = (100, 100, 100)
+
+        running = True
+
+        clock = py.time.Clock()
+
+        tiles = math.ceil(FrameWidth /bg.get_width()) + 1
+
+        YELLOW  = (255, 255, 0)
+        RED     = (255, 0, 0)
+        BLUE    = (0 , 0, 255)
+        GREEN   = (0, 255, 0)
+    except:
+        print("si kokot")
