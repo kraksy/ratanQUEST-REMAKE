@@ -1,35 +1,24 @@
 import pygame as py
+import random
+ 
 from map import *
 from sett import *
-import random
+from player import *
 
-class gaem:
-    py.display.set_caption('ratan quest') 
-    screen = py.display.set_mode((WIDTH, HEIGHT))
+py.display.set_caption('ratan quest')
 
+screen = py.display.set_mode((WIDTH, HEIGHT))
 
-    def create_texture(color):
-        image = py.Surface((TILE_SIZE,TILE_SIZE))
-        image.fill(color)
-        
-
-    textures = {
-    0 : create_texture(GREEN),
-    1 : create_texture(BROWN)
-    }
-
-    def event():
-        for event in py.event.get():
-            if event.type == py.QUIT:
+def event():
+    for event in py.event.get():
+        if event.type == py.QUIT:
+            py.quit()
+       s if event.type == py.KEYDOWN:
+            if event.key == py.K_ESCAPE:
                 py.quit()
-            if event.type == py.KEYDOWN:
-                if event.key == py.K_ESCAPE:
-                    py.quit()
 
-    while running:
-        event()
-
-        if tile 
+while running:
+    event()
 
 
-    py.display.update()
+py.display.update()
