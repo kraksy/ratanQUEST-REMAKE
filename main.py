@@ -13,7 +13,7 @@ def event():
     for event in py.event.get():
         if event.type == py.QUIT:
             py.quit()
-       s if event.type == py.KEYDOWN:
+        if event.type == py.KEYDOWN:
             if event.key == py.K_ESCAPE:
                 py.quit()
 
