@@ -30,7 +30,7 @@ try :
     clock = py.time.Clock()
 
     tiles = math.ceil(FrameWidth /bg.get_width()) + 1
-d
+
     YELLOW  = (255, 255, 0)
     RED     = (255, 0, 0)
     BLUE    = (0 , 0, 255)
