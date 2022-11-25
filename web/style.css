@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.qr {
+    padding: 3%;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+}
+
+
+.real-qr {
+
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aquamarine;
+}
+
+.np {
+    text-align: center;
+    margin-left: 20px;
+    font-size: larger;
+    font-style: italic;
+}
+
+.button {
+    width: 200px;
+    height: 30px;
+
+    font-size: large;
+
+    color:  black;
+    background-color: ;
+}
+
+.time {
+    margin-left: 60%;
+    margin-right: auto;
+    text-align: center;
+
+    margin-bottom: 10%;
+}
+
+.arr-text {
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.arr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.timet {
+    font-size: xx-large;
+}
+
+.main {
+
+    padding-top: 2%;
+
+    padding-bottom: 2%;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+}
+
+.info { 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    margin-bottom: ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header {
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    background-color: rgb(190, 190, 190);
+    
+    padding: 10px;
+
+}
+
+.cena {
+    display: flex;
+    justify-content: center;
+}
+
+.sleva {
+    display: flex;
+    justify-content: center;
+}
+
+.info2 {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    margin-left: 20%;
+    margin-right: 20%;
+
+    background-color: rgb(170, 161, 161);
+    padding: 10px;
+}
