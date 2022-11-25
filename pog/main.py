@@ -11,6 +11,14 @@ class ratan(arcade.Window):
 
     def setup(self):
 
+        self.wall_list = arcade.SpriteList(use_spatial_hash=True)
+        wall = arcade.Sprite("base.png", tile_scale)
+
+        for x in range(0, 256, 64):
+            wall.center_x = x
+            wall.center_y = 32
+            self.wall_list.append(wall)
+        
         pass
 
     def on_draw(self):
