@@ -5,6 +5,8 @@ dont trust me, i did nothing
 
 dont trust me, i did nothing part 2
 
+dont trust me, i did nothing part 3
+
 probably this will be rpg-dungeon crawler with genereted world!
 but pygame is making me uncontrollably angry.
 
