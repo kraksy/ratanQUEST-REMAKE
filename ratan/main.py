@@ -12,6 +12,7 @@ class ratan :
         py.display.set_caption(title)
         self.clock = py.time.Clock()
         py.key.set_repeat(500,100)
+        
 
     def load(self):
 
@@ -19,14 +20,22 @@ class ratan :
         self.mapdata = []
         with open(path.join(ratan_folder, 'map.txt')) as f:
             pass
+
+    def block(self):
+        py.draw.rect(surface, color, rect)
+
+    def background(self):
+        self.screen.fill(red)
         
     def run(self):
         self.playing = True
 
         while self.playing:
 
+            self.background()
             self.events()
             self.dt = self.clock.tick(fps) / 1000
+            py.display.update()
     
     def events(self):
         for event in py.event.get():
@@ -43,8 +52,3 @@ class ratan :
 game = ratan()
 while True:
     game.run()
-        
-
-
-
-
