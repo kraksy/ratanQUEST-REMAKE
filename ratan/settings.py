@@ -1,6 +1,7 @@
 
 width = 1024 # 32 * 32 
 height = 1024
+blocksize = 32
 
 tile = 32
 

@@ -13,7 +13,6 @@ class ratan :
         self.clock = py.time.Clock()
         py.key.set_repeat(500,100)
         
-
     def load(self):
 
         ratan_folder = path.dirname(__file__)
@@ -26,7 +25,13 @@ class ratan :
 
     def background(self):
         self.screen.fill(red)
-        
+
+        for x in range(width):
+            for y in range(height):
+                rect = py.Rect(x*blocksize, y*blocksize, blocksize, blocksize)
+
+                py.draw.rect(self.screen, gray, rect, 1)
+
     def run(self):
         self.playing = True
 
