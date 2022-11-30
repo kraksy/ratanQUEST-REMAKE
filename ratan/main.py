@@ -2,6 +2,8 @@ import pygame as py
 import sys
 from os import path
 from settings import * 
+from player import *
+from sprites import *
 
 class ratan : 
 
@@ -12,18 +14,9 @@ class ratan :
         py.display.set_caption(title)
         self.clock = py.time.Clock()
         py.key.set_repeat(500,100)
-        
-    def load(self):
-
-        ratan_folder = path.dirname(__file__)
-        self.mapdata = []
-        with open(path.join(ratan_folder, 'map.txt')) as f:
-            pass
-
-    def block(self):
-        py.draw.rect(surface, color, rect)
 
     def background(self):
+
         self.screen.fill(red)
 
         for x in range(width):
@@ -31,8 +24,26 @@ class ratan :
                 rect = py.Rect(x*blocksize, y*blocksize, blocksize, blocksize)
 
                 py.draw.rect(self.screen, gray, rect, 1)
+    
+    def player_movement():
 
+        self.playerpos = [0,0]
+        self.player = Player(self)
+
+        if event.type == KEYDOWN:
+            if event.key == K_RIGHT and playerpos[0] < width -1:
+                playerpos[0] += 1
+            if event.key == K_LEFT and playerpos[0] < 0:
+                playerpos[0] -= 1
+            if event.key == K_DOWN and playerpos[1] < height -1:
+                playerpos[1] += 1
+            if event.key == K_UP and playerpos[1] < 0:
+                playerpos[1] -= 1
+
+            self.screen.blit(player,(playerpos[0]*tile,playerpos[1]*tile))
+            
     def run(self):
+
         self.playing = True
 
         while self.playing:
